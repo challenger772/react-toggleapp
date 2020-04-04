@@ -12,7 +12,7 @@ class Toggle extends React.Component {
   }
    
   
-  handleClick() {
+  handleClick = () => {
     this.setState(state => ({
       isToggleOn: !state.isToggleOn
     }));
@@ -20,7 +20,7 @@ class Toggle extends React.Component {
 
   render() {
     return (
-      <button onClick={() => this.handleClick()}>{this.state.isToggleOn ? 'On' : 'Off'}</button>
+      <button onClick={this.handleClick}>{this.state.isToggleOn ? 'On' : 'Off'}</button>
     )
   }
 }
